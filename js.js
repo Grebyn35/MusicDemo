@@ -24,7 +24,6 @@ var notes = [
     "/Notes/lick 5.wav",  
     "/Notes/lick.wav",
     "/Notes/waterfall.wav",  
-    "/Notes/waterfall.wav",  
 ];
 
 
@@ -48,7 +47,6 @@ const n11 = new Howl({src: [notes[11]],preload: true, volume: 0.45});
 const n12 = new Howl({src: [notes[12]],preload: true, volume: 0.45});
 const n13 = new Howl({src: [notes[13]],preload: true, volume: 0.45});
 const n14 = new Howl({src: [notes[14]],preload: true, volume: 0.45});
-const n15 = new Howl({src: [notes[15]],preload: true, volume: 0.45});
 
 const notesArray = [];
 notesArray.push(n0);
@@ -66,7 +64,6 @@ notesArray.push(n11);
 notesArray.push(n12);
 notesArray.push(n13);
 notesArray.push(n14);
-notesArray.push(n15);
 
 toggleMute[0].onclick = function() {
     firstLoad(backtrack1)
