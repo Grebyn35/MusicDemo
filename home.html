@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <section class="bg-primary py-md-5 px-md-5">
+    <section class="bg-primary py-md-5 px-xl-5">
         <div class="d-none d-md-flex justify-content-between align-items-center">
             <div>
                 <a class="me-3" href="">
@@ -56,192 +56,51 @@
                 <img src="/images/white-curve.webp" class="w-100 position-absolute" alt="">
             </div>
             <div class="bg-white pb-5" style="z-index: 3;">
-                <div class="container">
+                <div class="container px-0 px-sm-3">
                     <h2 class="h1 fw-bold text-center" style="color: rgb(233, 88, 35);">Create music with Ruby and the
                         recyclers!</h2>
 
-                    <div class="mx-auto mt-5" style="max-width: 400px;">
-                        <div class="p-1 rounded-3 shadow-sm border border-dark" style="background-color: #3a3e48;">
-                            <div class="p-1 p-sm-3 rounded-3 shadow-sm border border-dark" style="background-color: #2d313a;">
-                                <div class="w-100 d-flex justify-content-end pb-3">
-                                    <div
-                                        class="w-100 d-flex justify-content-between gap-2 border-bottom border-dark pb-1">
-
-                                        <div class="d-flex gap-2">
-                                            <div class="music-btn-sm text-light border border-light toggle-mute"
-                                                status="Umute">
-                                                <span class="material-symbols-rounded fs-2">mic</span>
-                                            </div>
-
-                                            <div class="music-btn-sm text-light border border-light toggle-mute" status="Umute">
-                                                <span class="material-symbols-rounded fs-1 fw-light">album</span>
-                                            </div>
-
-                                            <div class="music-btn-sm text-light border border-light mb-2 toggle-mute"
-                                                status="Umute">
-                                                <img style="width: 2rem; filter:invert(1)"
-                                                    src="/images/drums-svgrepo-com.svg" alt=""></span>
-                                                
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex gap-2">
-                                            <div id="stop">
-                                                <div id="stop" class="music-btn-sm border border-danger">
-                                                    <span class="material-symbols-rounded text-danger fs-1">stop</span>
-                                                </div>
-                                            </div>
-
-                                            <div id="playDiv">
-                                                <div id="tool-toggle" class="music-btn-sm border border-white">
-                                                    <span
-                                                        class="material-symbols-rounded text-white fs-1">play_pause</span>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-                                <div class="">
-                                    <div class="row pe-2 pt-1">
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(0)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #FF0099 !important; color: #FF0099">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(1)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #FFFF33 !important; color: #FFFF33">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(2)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #00FFCC !important; color: #00FFCC">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(3)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #33FF00 !important; color: #33FF00">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(4)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #0066FF !important; color: #0066FF">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(5)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #CC0033 !important; color: #CC0033">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(6)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #FFFFCC !important; color: #FFFFCC">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(7)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #00CCFF !important; color: #00CCFF">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(8)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #FFCCFF !important; color: #FFCCFF">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(9)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #CCFF66 !important; color: #CCFF66">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(10)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #CC66CC !important; color: #CC66CC">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(11)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #FFCC66 !important; color: #FFCC66">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(12)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #FF6633 !important; color: #FF6633">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(13)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #3366CC !important; color: #3366CC">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(14)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #CC3366 !important; color: #CC3366">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                        <!-- musikknapp -->
-                                        <div class="col-3 mb-2" style="cursor: pointer;" onclick="playNote(15)">
-                                            <div class="music-btn-lg border"
-                                                style="border: 1px solid #66FF99 !important; color: #66FF99">
-                                                <span class="material-symbols-rounded fs-2">music_note</span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
+                    <div class="my-5 pt-5">
+                        <div class="center gap-2 position-relative" style="z-index: 5;">
+                            <div status="Umute" class="center rounded-circle"
+                                style="width: 60px; height: 60px; background-color: #ff4949; cursor: pointer;">
+                                <span class="material-symbols-rounded fs-1 text-white">stop</span>
                             </div>
+                            <div status="Umute" class="center rounded-circle"
+                                style="width: 60px; height: 60px; background-color: #ff4949; cursor: pointer;">
+                                <span class="material-symbols-rounded fs-1 text-white">stop</span>
+                            </div>
+                            <div status="Umute" class="center rounded-circle"
+                                style="width: 60px; height: 60px; background-color: #ff4949; cursor: pointer;">
+                                <span class="material-symbols-rounded fs-1 text-white">stop</span>
+                            </div>
+                            <div id="stop" class="center rounded-circle"
+                                style="width: 60px; height: 60px; background-color: #ff4949; cursor: pointer;">
+                                <span class="material-symbols-rounded fs-1 text-white">stop</span>
+                            </div>
+                        </div>
 
+                        <div class="center" style="margin-top: -100px;">
+                            <div class="position-relative center" style="width: 980px; height: 452px;">
+                                <div style="margin-left: -6px; margin-bottom: -4px;"
+                                    class="position-absolute d-flex align-items-center">
+                                    <div onclick="playNote(1)" style="width: 102px; height: 125px;"></div>
+                                    <div onclick="playNote(2)" style="width: 114px; height: 125px;"></div>
+                                    <div onclick="playNote(3)" style="width: 130px; height: 125px;"></div>
+                                    <div onclick="playNote(4)" style="width: 123px; height: 125px;"></div>
+                                    <div onclick="playNote(5)" style="width: 123px; height: 125px;"></div>
+                                    <div onclick="playNote(6)" style="width: 115px; height: 125px;"></div>
+                                    <div onclick="playNote(7)" style="width: 96px; height: 125px;"></div>
+                                </div>
+                                <img src="/images/ruby_guitar_background.webp" alt="">
+                            </div>
                         </div>
                     </div>
+
+
+
+
+
                 </div>
 
 
