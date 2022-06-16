@@ -61,23 +61,45 @@
                         recyclers!</h2>
 
                     <div class="my-5 pt-5">
+                        <div class="d-flex gap-4">
+                            <div id="playDiv" style="display: none;">
+                                <div class="center key border border-3 rounded-circle" id="tool-toggle" status="Pause"
+                                style="width: 75px; height: 75px; background-color: rgb(201, 23, 23);">
+                                    <span class="fs-1 text-white material-symbols-rounded">
+                                        play_pause
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-4">
+                            <div id="stop" style="display: none;">
+                                <div class="center key border border-3 rounded-circle" id="stop"
+                                style="width: 75px; height: 75px; background-color: rgb(201, 23, 23);">
+                                    <span class="fs-1 text-white material-symbols-rounded">
+                                        stop
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="center gap-2 position-relative" style="z-index: 5;">
-                            <div status="Umute" class="center rounded-circle"
-                                style="width: 60px; height: 60px; background-color: #ff4949; cursor: pointer;">
-                                <span class="material-symbols-rounded fs-1 text-white">stop</span>
-                            </div>
-                            <div status="Umute" class="center rounded-circle"
-                                style="width: 60px; height: 60px; background-color: #ff4949; cursor: pointer;">
-                                <span class="material-symbols-rounded fs-1 text-white">stop</span>
-                            </div>
-                            <div status="Umute" class="center rounded-circle"
-                                style="width: 60px; height: 60px; background-color: #ff4949; cursor: pointer;">
-                                <span class="material-symbols-rounded fs-1 text-white">stop</span>
-                            </div>
-                            <div id="stop" class="center rounded-circle"
-                                style="width: 60px; height: 60px; background-color: #ff4949; cursor: pointer;">
-                                <span class="material-symbols-rounded fs-1 text-white">stop</span>
-                            </div>
+                            <div class="key center border border-bright border-3 rounded-pill toggle-mute" status="Umute"
+                                        style="width: 150px; height: 75px; background-color: rgb(111, 204, 18);">
+                                        <span class="fs-1 text-white material-symbols-rounded">
+                                            record_voice_over
+                                        </span>
+                                    </div>
+                                    <div class="key center border border-bright border-3 rounded-pill toggle-mute" status="Umute"
+                                        style="width: 150px; height: 75px; background-color: cornflowerblue">
+                                        <span class="fs-1 text-white material-symbols-rounded">
+                                            voice_over_off
+                                        </span>
+                                    </div>
+                                    <div class="key center border border-bright border-3 rounded-pill toggle-mute" status="Umute"
+                                        style="width: 150px; height: 75px; background-color: rgb(131, 64, 131)">
+                                        <span class="fs-1 text-white material-symbols-rounded">
+                                            hexagon
+                                        </span>
+                                    </div>
                         </div>
 
                         <div class="center" style="margin-top: -100px;">
