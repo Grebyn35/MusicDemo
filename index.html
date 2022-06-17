@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="basic.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body style="overflow-x: hidden;">
@@ -72,6 +72,15 @@
 
                     <div class="my-5 pt-5">
                         <div class="center gap-3 position-relative" style="z-index: 5;">
+                            <div class="key center border rounded-circle bg-success" id="statusButton"
+                                status="notesPlaylistOne" onclick="changenotesPlaylist()" style="width: 75px; height: 75px;">
+                                <span id="iconStatusButtonOne" class="fs-1 text-white material-symbols-rounded">
+                                    toggle_on
+                                </span>
+                                <span id="iconStatusButtonTwo" class="fs-1 text-white material-symbols-rounded" style="display: none;">
+                                    toggle_off
+                                </span>
+                            </div>
                             <div class="key center border rounded-circle toggle-mute bg-success"
                                 status="Umute" style="width: 75px; height: 75px;">
                                 <span class="fs-1 text-white material-symbols-rounded">
