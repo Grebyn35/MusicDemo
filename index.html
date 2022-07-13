@@ -16,183 +16,91 @@
 </head>
 
 <body style="overflow-x: hidden;">
-    <div style="width: 980px;">
-        <div class="w-100 bg-dark px-4 pt-3 rounded my-5">
-            <div class="p-4 d-flex justify-content-between shadow" style="z-index: 2">
-                <div class="d-flex gap-4">
-                    <div id="stop" style="display: none;">
-                        <div class="center key border border-3 rounded-circle" id="stop"
-                            style="width: 75px; height: 75px; background-color: rgb(201, 23, 23);">
-                            <span class="fs-1 text-white material-symbols-rounded">
-                                stop
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex gap-4">
-                    <div class="key center border border-bright border-3 rounded-pill toggle-mute" status="Umute"
-                        style="width: 150px; height: 75px; background-color: rgb(111, 204, 18);">
-                        <span class="fs-1 text-white material-symbols-rounded">
-                            record_voice_over
-                        </span>
-                    </div>
-                    <div class="key center border border-bright border-3 rounded-pill toggle-mute" status="Umute"
-                        style="width: 150px; height: 75px; background-color: cornflowerblue">
-                        <span class="fs-1 text-white material-symbols-rounded">
-                            voice_over_off
-                        </span>
-                    </div>
-                    <div class="key center border border-bright border-3 rounded-pill toggle-mute" status="Umute"
-                        style="width: 150px; height: 75px; background-color: rgb(131, 64, 131)">
-                        <span class="fs-1 text-white material-symbols-rounded">
-                            hexagon
-                        </span>
-                    </div>
 
+    <div class="d-flex">
+        <div class="d-none d-flex gap-4">
+            <div id="playDiv" style="display: none;">
+                <div class="center key border border-3 rounded-circle" id="tool-toggle" status="Pause"
+                    style="width: 75px; height: 75px; background-color: rgb(201, 23, 23);">
+                    <span class="fs-1 text-white material-symbols-rounded">
+                        play_pause
+                    </span>
                 </div>
             </div>
-
-            <div class="d-flex gap-1 bg-light" style="height: 200px; z-index: 1;">
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(0)">
-                    <div class="p-3 rounded-circle mb-3" style="width: 70px; height: 70px; background-color: aqua;">
+        </div>
+    
+        <div class="my-4">
+            <div class="center gap-3 position-relative" style="z-index: 5;">
+                <div class="key center border rounded-circle bg-success" id="statusButton" status="notesPlaylistOne"
+                    onclick="changenotesPlaylist()" style="width: 75px; height: 75px;">
+                    <span id="iconStatusButtonOne" class="fs-1 text-white material-symbols-rounded">
+                        toggle_on
+                    </span>
+                    <span id="iconStatusButtonTwo" class="fs-1 text-white material-symbols-rounded" style="display: none;">
+                        toggle_off
+                    </span>
+                </div>
+                <div class="key center border rounded-circle toggle-mute bg-info" status="Umute"
+                    style="width: 75px; height: 75px;">
+                    <span class="fs-1 text-white material-symbols-rounded">
+                        record_voice_over
+                    </span>
+                </div>
+                <div class="key center border rounded-circle toggle-mute bg-warning" status="Umute"
+                    style="width: 75px; height: 75px">
+                    <span class="fs-1 text-white material-symbols-rounded">
+                        voice_over_off
+                    </span>
+                </div>
+                <div class="key center border rounded-circle toggle-mute bg-primary" status="Umute"
+                    style="width: 75px; height: 75px;">
+                    <span class="fs-1 text-white material-symbols-rounded">
+                        hexagon
+                    </span>
+                </div>
+    
+                <div id="stop" class="key center border rounded toggle-mute" status="Umute"
+                    style=" width: 68px; height: 68px; background-color: rgb(201, 23, 23);">
+                    <span class="fs-1 text-white material-symbols-rounded">
+                        stop
+                    </span>
+                </div>
+            </div>
+    
+            <div class="d-none d-md-flex center" style="margin-top: -100px;">
+                <div class="position-relative center" style="width: 980px; height: 452px;">
+                    <div style="margin-left: -6px; margin-bottom: -4px;"
+                        class="position-absolute d-flex align-items-center">
+                        <div onclick="playNote(1)" style="width: 102px; height: 125px;"></div>
+                        <div onclick="playNote(2)" style="width: 114px; height: 125px;"></div>
+                        <div onclick="playNote(3)" style="width: 130px; height: 125px;"></div>
+                        <div onclick="playNote(4)" style="width: 123px; height: 125px;"></div>
+                        <div onclick="playNote(5)" style="width: 123px; height: 125px;"></div>
+                        <div onclick="playNote(6)" style="width: 115px; height: 125px;"></div>
+                        <div onclick="playNote(7)" style="width: 96px; height: 125px;"></div>
                     </div>
+                    <img src="/images/ruby_guitar_background.webp" alt="">
                 </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(1)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(255, 221, 0);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(2)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(140, 0, 255);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(3)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(77, 255, 0);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(4)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(255, 0, 195);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(5)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(255, 115, 0);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(6)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(208, 255, 0);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(7)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(0, 149, 255);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(8)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(0, 255, 132);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(9)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(255, 0, 30);"></div>
-                </div>
-                <div class="key w-100 bg-light shadow rounded-bottom d-flex flex-column justify-content-end align-items-center"
-                    onclick="playNote(10)">
-                    <div class="p-3 rounded-circle mb-3"
-                        style="width: 70px; height: 70px; background-color: rgb(0, 21, 255);"></div>
+            </div>
+    
+            <div class="d-flex d-md-none center" style="margin-top: -50px;">
+                <div class="position-relative center" style="width: 440px; height: 226px;">
+                    <div style="margin-left: -3px; margin-bottom: -2px; width: 364px;"
+                        class="position-absolute d-flex align-items-center">
+                        <div onclick="playNote(1)" style="width: 51px; height: 63px;"></div>
+                        <div onclick="playNote(2)" style="width: 57px; height: 63px;"></div>
+                        <div onclick="playNote(3)" style="width: 65px; height: 63px;"></div>
+                        <div onclick="playNote(4)" style="width: 61px; height: 63px;"></div>
+                        <div onclick="playNote(5)" style="width: 62px; height: 63px;"></div>
+                        <div onclick="playNote(6)" style="width: 57px; height: 63px;"></div>
+                        <div onclick="playNote(7)" style="width: 48px; height: 63px;"></div>
+                    </div>
+                    <img style="width: 440px;" src="/images/ruby_guitar_background.webp" alt="">
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="d-none d-flex gap-4">
-        <div id="playDiv" style="display: none;">
-            <div class="center key border border-3 rounded-circle" id="tool-toggle" status="Pause"
-                style="width: 75px; height: 75px; background-color: rgb(201, 23, 23);">
-                <span class="fs-1 text-white material-symbols-rounded">
-                    play_pause
-                </span>
-            </div>
-        </div>
-    </div>
-
-    <div class="my-4">
-        <div class="center gap-3 position-relative" style="z-index: 5;">
-            <div class="key center border rounded-circle bg-success" id="statusButton" status="notesPlaylistOne"
-                onclick="changenotesPlaylist()" style="width: 75px; height: 75px;">
-                <span id="iconStatusButtonOne" class="fs-1 text-white material-symbols-rounded">
-                    toggle_on
-                </span>
-                <span id="iconStatusButtonTwo" class="fs-1 text-white material-symbols-rounded" style="display: none;">
-                    toggle_off
-                </span>
-            </div>
-            <div class="key center border rounded-circle toggle-mute bg-success" status="Umute"
-                style="width: 75px; height: 75px;">
-                <span class="fs-1 text-white material-symbols-rounded">
-                    record_voice_over
-                </span>
-            </div>
-            <div class="key center border rounded-circle toggle-mute bg-warning" status="Umute"
-                style="width: 75px; height: 75px">
-                <span class="fs-1 text-white material-symbols-rounded">
-                    voice_over_off
-                </span>
-            </div>
-            <div class="key center border rounded-circle toggle-mute bg-primary" status="Umute"
-                style="width: 75px; height: 75px;">
-                <span class="fs-1 text-white material-symbols-rounded">
-                    hexagon
-                </span>
-            </div>
-
-            <div id="stop" class="key center border rounded toggle-mute" status="Umute"
-                style=" width: 68px; height: 68px; background-color: rgb(201, 23, 23);">
-                <span class="fs-1 text-white material-symbols-rounded">
-                    stop
-                </span>
-            </div>
-        </div>
-
-        <div class="d-none d-md-flex center" style="margin-top: -100px;">
-            <div class="position-relative center" style="width: 980px; height: 452px;">
-                <div style="margin-left: -6px; margin-bottom: -4px;"
-                    class="position-absolute d-flex align-items-center">
-                    <div onclick="playNote(1)" style="width: 102px; height: 125px;"></div>
-                    <div onclick="playNote(2)" style="width: 114px; height: 125px;"></div>
-                    <div onclick="playNote(3)" style="width: 130px; height: 125px;"></div>
-                    <div onclick="playNote(4)" style="width: 123px; height: 125px;"></div>
-                    <div onclick="playNote(5)" style="width: 123px; height: 125px;"></div>
-                    <div onclick="playNote(6)" style="width: 115px; height: 125px;"></div>
-                    <div onclick="playNote(7)" style="width: 96px; height: 125px;"></div>
-                </div>
-                <img src="/images/ruby_guitar_background.webp" alt="">
-            </div>
-        </div>
-
-        <div class="d-flex d-md-none center" style="margin-top: -50px;">
-            <div class="position-relative center" style="width: 440px; height: 226px;">
-                <div style="margin-left: -3px; margin-bottom: -2px; width: 364px;"
-                    class="position-absolute d-flex align-items-center">
-                    <div onclick="playNote(1)" style="width: 51px; height: 63px;"></div>
-                    <div onclick="playNote(2)" style="width: 57px; height: 63px;"></div>
-                    <div onclick="playNote(3)" style="width: 65px; height: 63px;"></div>
-                    <div onclick="playNote(4)" style="width: 61px; height: 63px;"></div>
-                    <div onclick="playNote(5)" style="width: 62px; height: 63px;"></div>
-                    <div onclick="playNote(6)" style="width: 57px; height: 63px;"></div>
-                    <div onclick="playNote(7)" style="width: 48px; height: 63px;"></div>
-                </div>
-                <img style="width: 440px;" src="/images/ruby_guitar_background.webp" alt="">
-            </div>
-        </div>
-    </div>
+    
 
     <script src="/js.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
