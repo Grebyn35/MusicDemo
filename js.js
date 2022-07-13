@@ -205,7 +205,7 @@ document.getElementById("stop").onclick = function() {
 }
 
 function playNote(index){
-    //muteNotes()
+    muteNotes()
     notesArray[index].play()
 }
 function muteNotes(){
