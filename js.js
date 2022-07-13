@@ -8,23 +8,25 @@ var backtracks = [
     "/Backtracks/Peter Pants - DNB.mp3"
 ];
 
-var notes = [
-    "/Notes/bend 1.wav",
-    "/Notes/bend 2.wav",
-    "/Notes/bend 3.wav",
-    "/Notes/bend 4.wav",
-    "/Notes/bend 5.wav",
-    "/Notes/Dive.wav",
-    "/Notes/drills.wav",
-    "/Notes/hammer.wav",
-    "/Notes/intense.wav",
-    "/Notes/lick 2.wav",
-    "/Notes/lick 3.wav",
-    "/Notes/lick 4.wav", 
-    "/Notes/lick 5.wav",  
-    "/Notes/lick.wav",
-    "/Notes/waterfall.wav",  
+var notesPlayListOne = [
+    "/PlaylistOne/Bend1.mp3",
+    "/PlaylistOne/Bend2.mp3",
+    "/PlaylistOne/Bend3.mp3",
+    "/PlaylistOne/Bend4.mp3",
+    "/PlaylistOne/Bend5.mp3",
+    "/PlaylistOne/Bend6.mp3",
+    "/PlaylistOne/Bend7.mp3"
 ];
+var notesPlayListTwo = [
+    "/PlaylistTwo/Blues1.mp3",
+    "/PlaylistTwo/Blues2.mp3",
+    "/PlaylistTwo/Dive.mp3",
+    "/PlaylistTwo/Drill.mp3",
+    "/PlaylistTwo/Drill2.mp3",
+    "/PlaylistTwo/Lick1.mp3",
+    "/PlaylistTwo/Waterfall.mp3"
+];
+var notes = notesPlayListOne;
 
 
 const backtrack1 = new Howl({src: [backtracks[0]],preload: true, loop:true});
@@ -32,23 +34,23 @@ const backtrack2 = new Howl({src: [backtracks[1]],preload: true, loop:true});
 const backtrack3 = new Howl({src: [backtracks[2]],preload: true, loop:true});
 //const backtrack4 = new Howl({src: [backtracks[3]],preload: true, loop:true});
 
-const n0 = new Howl({src: [notes[0]],preload: true, volume: 0.45});
-const n1 = new Howl({src: [notes[1]],preload: true, volume: 0.45});
-const n2 = new Howl({src: [notes[2]],preload: true, volume: 0.45});
-const n3 = new Howl({src: [notes[3]],preload: true, volume: 0.45});
-const n4 = new Howl({src: [notes[4]],preload: true, volume: 0.45});
-const n5 = new Howl({src: [notes[5]],preload: true, volume: 0.45});
-const n6 = new Howl({src: [notes[6]],preload: true, volume: 0.45});
-const n7 = new Howl({src: [notes[7]],preload: true, volume: 0.45});
-const n8 = new Howl({src: [notes[8]],preload: true, volume: 0.45});
-const n9 = new Howl({src: [notes[9]],preload: true, volume: 0.45});
-const n10 = new Howl({src: [notes[10]],preload: true, volume: 0.45});
-const n11 = new Howl({src: [notes[11]],preload: true, volume: 0.45});
-const n12 = new Howl({src: [notes[12]],preload: true, volume: 0.45});
-const n13 = new Howl({src: [notes[13]],preload: true, volume: 0.45});
-const n14 = new Howl({src: [notes[14]],preload: true, volume: 0.45});
+let n0 = new Howl({src: [notes[0]],preload: true, volume: 0.45});
+let n1 = new Howl({src: [notes[1]],preload: true, volume: 0.45});
+let n2 = new Howl({src: [notes[2]],preload: true, volume: 0.45});
+let n3 = new Howl({src: [notes[3]],preload: true, volume: 0.45});
+let n4 = new Howl({src: [notes[4]],preload: true, volume: 0.45});
+let n5 = new Howl({src: [notes[5]],preload: true, volume: 0.45});
+let n6 = new Howl({src: [notes[6]],preload: true, volume: 0.45});
+let n7 = new Howl({src: [notes[7]],preload: true, volume: 0.45});
+let n8 = new Howl({src: [notes[8]],preload: true, volume: 0.45});
+let n9 = new Howl({src: [notes[9]],preload: true, volume: 0.45});
+let n10 = new Howl({src: [notes[10]],preload: true, volume: 0.45});
+let n11 = new Howl({src: [notes[11]],preload: true, volume: 0.45});
+let n12 = new Howl({src: [notes[12]],preload: true, volume: 0.45});
+let n13 = new Howl({src: [notes[13]],preload: true, volume: 0.45});
+let n14 = new Howl({src: [notes[14]],preload: true, volume: 0.45});
 
-const notesArray = [];
+let notesArray = [];
 notesArray.push(n0);
 notesArray.push(n1);
 notesArray.push(n2);
@@ -56,7 +58,7 @@ notesArray.push(n3);
 notesArray.push(n4);
 notesArray.push(n5);
 notesArray.push(n6);
-notesArray.push(n7);
+notesArray.push(n7);    
 notesArray.push(n8);
 notesArray.push(n9);
 notesArray.push(n10);
@@ -64,6 +66,41 @@ notesArray.push(n11);
 notesArray.push(n12);
 notesArray.push(n13);
 notesArray.push(n14);
+
+function updateNotes(){
+    n0 = new Howl({src: [notes[0]],preload: true, volume: 0.45});
+    n1 = new Howl({src: [notes[1]],preload: true, volume: 0.45});
+    n2 = new Howl({src: [notes[2]],preload: true, volume: 0.45});
+    n3 = new Howl({src: [notes[3]],preload: true, volume: 0.45});
+    n4 = new Howl({src: [notes[4]],preload: true, volume: 0.45});
+    n5 = new Howl({src: [notes[5]],preload: true, volume: 0.45});
+    n6 = new Howl({src: [notes[6]],preload: true, volume: 0.45});
+    n7 = new Howl({src: [notes[7]],preload: true, volume: 0.45});
+    n8 = new Howl({src: [notes[8]],preload: true, volume: 0.45});
+    n9 = new Howl({src: [notes[9]],preload: true, volume: 0.45});
+    n10 = new Howl({src: [notes[10]],preload: true, volume: 0.45});
+    n11 = new Howl({src: [notes[11]],preload: true, volume: 0.45});
+    n12 = new Howl({src: [notes[12]],preload: true, volume: 0.45});
+    n13 = new Howl({src: [notes[13]],preload: true, volume: 0.45});
+    n14 = new Howl({src: [notes[14]],preload: true, volume: 0.45});
+
+    notesArray = [];
+    notesArray.push(n0);
+    notesArray.push(n1);
+    notesArray.push(n2);
+    notesArray.push(n3);
+    notesArray.push(n4);
+    notesArray.push(n5);
+    notesArray.push(n6);
+    notesArray.push(n7);
+    notesArray.push(n8);
+    notesArray.push(n9);
+    notesArray.push(n10);
+    notesArray.push(n11);
+    notesArray.push(n12);
+    notesArray.push(n13);
+    notesArray.push(n14);
+}
 
 toggleMute[0].onclick = function() {
     firstLoad(backtrack1)
@@ -255,3 +292,23 @@ document.addEventListener('keydown', function(event) {
         playNote(11)
     }
 });
+function changenotesPlaylist(){
+    let status = document.getElementById("statusButton").getAttribute("status")
+    if(status == "notesPlaylistOne"){
+        document.getElementById("statusButton").setAttribute("status", "notesPlaylistTwo")
+        document.getElementById("iconStatusButtonOne").style.display = "none"
+        document.getElementById("iconStatusButtonTwo").style.display = ""
+        notes = notesPlayListTwo;
+        updateNotes()
+        console.log(notesArray)
+    }
+    else if(status == "notesPlaylistTwo"){
+        document.getElementById("statusButton").setAttribute("status", "notesPlaylistOne")
+        document.getElementById("iconStatusButtonOne").style.display = ""
+        document.getElementById("iconStatusButtonTwo").style.display = "none"
+        notes = notesPlayListOne;
+        updateNotes()
+        console.log(notesArray)
+    }
+    console.log(status)
+}
