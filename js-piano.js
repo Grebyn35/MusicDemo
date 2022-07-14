@@ -37,7 +37,7 @@ const backtrack3 = new Howl({src: [backtracks[2]],preload: true, loop:true});
 let n0 = new Howl({src: [notes[0]],preload: true, volume: 2.00});
 let n1 = new Howl({src: [notes[1]],preload: true, volume: 2.00});
 let n2 = new Howl({src: [notes[2]],preload: true, volume: 2.00});
-let n3 = new Howl({src: [notes[3]],preload: true, volume: 2.0});
+let n3 = new Howl({src: [notes[3]],preload: true, volume: 2.00});
 let n4 = new Howl({src: [notes[4]],preload: true, volume: 2.00});
 let n5 = new Howl({src: [notes[5]],preload: true, volume: 2.00});
 let n6 = new Howl({src: [notes[6]],preload: true, volume: 2.00});
@@ -53,13 +53,13 @@ notesArray.push(n6);
 console.log(notesArray)
 
 function updateNotes(){
-    n0 = new Howl({src: [notes[0]],preload: true, volume: 0.45});
-    n1 = new Howl({src: [notes[1]],preload: true, volume: 0.45});
-    n2 = new Howl({src: [notes[2]],preload: true, volume: 0.45});
-    n3 = new Howl({src: [notes[3]],preload: true, volume: 0.45});
-    n4 = new Howl({src: [notes[4]],preload: true, volume: 0.45});
-    n5 = new Howl({src: [notes[5]],preload: true, volume: 0.45});
-    n6 = new Howl({src: [notes[6]],preload: true, volume: 0.45});
+    n0 = new Howl({src: [notes[0]],preload: true, volume: 2.00});
+    n1 = new Howl({src: [notes[1]],preload: true, volume: 2.00});
+    n2 = new Howl({src: [notes[2]],preload: true, volume: 2.00});
+    n3 = new Howl({src: [notes[3]],preload: true, volume: 2.00});
+    n4 = new Howl({src: [notes[4]],preload: true, volume: 2.00});
+    n5 = new Howl({src: [notes[5]],preload: true, volume: 2.00});
+    n6 = new Howl({src: [notes[6]],preload: true, volume: 2.00});
 
     notesArray = [];
     notesArray.push(n0);
