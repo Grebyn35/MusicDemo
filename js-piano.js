@@ -24,7 +24,7 @@ var notesPlayListTwo = [
     "/PlaylistTwo/11. Synth.mp3",
     "/PlaylistTwo/12. Synth.mp3",
     "/PlaylistTwo/13. Synth.mp3",
-    "/PlaylistTwo/13. Synth.mp3"
+    "/PlaylistTwo/8. Synth.mp3"
 ];
 var notes = notesPlayListOne;
 
