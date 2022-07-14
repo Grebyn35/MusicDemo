@@ -3,28 +3,28 @@ const toolToggle = document.getElementById("tool-toggle")
 let isFirstLoad = true;
 
 var backtracks = [
-    "/Backtracks/Peter Pants - original.mp3",
-    "/Backtracks/Peter Pants - original - no vox.mp3",
-    "/Backtracks/Peter Pants - DNB.mp3"
+    "/Backtracks/Oh Ruby - Original.mp3",
+    "/Backtracks/Oh Ruby - Original.mp3",
+    "/Backtracks/Oh Ruby - EDM dur.mp3"
 ];
 
 var notesPlayListOne = [
-    "/PlaylistOne/Bend1.mp3",
-    "/PlaylistOne/Bend2.mp3",
-    "/PlaylistOne/Bend3.mp3",
-    "/PlaylistOne/Bend4.mp3",
-    "/PlaylistOne/Bend5.mp3",
-    "/PlaylistOne/Bend6.mp3",
-    "/PlaylistOne/Bend7.mp3"
+    "/PlaylistOne/1. Synth.mp3",
+    "/PlaylistOne/2. Synth.mp3",
+    "/PlaylistOne/3. Synth.mp3",
+    "/PlaylistOne/4. Synth.mp3",
+    "/PlaylistOne/5. Synth.mp3",
+    "/PlaylistOne/6. Synth.mp3",
+    "/PlaylistOne/7. Synth.mp3",
 ];
 var notesPlayListTwo = [
-    "/PlaylistTwo/Blues1.mp3",
-    "/PlaylistTwo/Blues2.mp3",
-    "/PlaylistTwo/Dive.mp3",
-    "/PlaylistTwo/Drill.mp3",
-    "/PlaylistTwo/Drill2.mp3",
-    "/PlaylistTwo/Lick1.mp3",
-    "/PlaylistTwo/Waterfall.mp3"
+    "/PlaylistTwo/8. Synth.mp3",
+    "/PlaylistTwo/9. Synth.mp3",
+    "/PlaylistTwo/10. Synth.mp3",
+    "/PlaylistTwo/11. Synth.mp3",
+    "/PlaylistTwo/12. Synth.mp3",
+    "/PlaylistTwo/13. Synth.mp3",
+    "/PlaylistTwo/13. Synth.mp3"
 ];
 var notes = notesPlayListOne;
 
@@ -34,21 +34,13 @@ const backtrack2 = new Howl({src: [backtracks[1]],preload: true, loop:true});
 const backtrack3 = new Howl({src: [backtracks[2]],preload: true, loop:true});
 //const backtrack4 = new Howl({src: [backtracks[3]],preload: true, loop:true});
 
-let n0 = new Howl({src: [notes[0]],preload: true, volume: 0.45});
-let n1 = new Howl({src: [notes[1]],preload: true, volume: 0.45});
-let n2 = new Howl({src: [notes[2]],preload: true, volume: 0.45});
-let n3 = new Howl({src: [notes[3]],preload: true, volume: 0.45});
-let n4 = new Howl({src: [notes[4]],preload: true, volume: 0.45});
-let n5 = new Howl({src: [notes[5]],preload: true, volume: 0.45});
-let n6 = new Howl({src: [notes[6]],preload: true, volume: 0.45});
-let n7 = new Howl({src: [notes[7]],preload: true, volume: 0.45});
-let n8 = new Howl({src: [notes[8]],preload: true, volume: 0.45});
-let n9 = new Howl({src: [notes[9]],preload: true, volume: 0.45});
-let n10 = new Howl({src: [notes[10]],preload: true, volume: 0.45});
-let n11 = new Howl({src: [notes[11]],preload: true, volume: 0.45});
-let n12 = new Howl({src: [notes[12]],preload: true, volume: 0.45});
-let n13 = new Howl({src: [notes[13]],preload: true, volume: 0.45});
-let n14 = new Howl({src: [notes[14]],preload: true, volume: 0.45});
+let n0 = new Howl({src: [notes[0]],preload: true, volume: 2.00});
+let n1 = new Howl({src: [notes[1]],preload: true, volume: 2.00});
+let n2 = new Howl({src: [notes[2]],preload: true, volume: 2.00});
+let n3 = new Howl({src: [notes[3]],preload: true, volume: 2.0});
+let n4 = new Howl({src: [notes[4]],preload: true, volume: 2.00});
+let n5 = new Howl({src: [notes[5]],preload: true, volume: 2.00});
+let n6 = new Howl({src: [notes[6]],preload: true, volume: 2.00});
 
 let notesArray = [];
 notesArray.push(n0);
@@ -58,14 +50,7 @@ notesArray.push(n3);
 notesArray.push(n4);
 notesArray.push(n5);
 notesArray.push(n6);
-notesArray.push(n7);    
-notesArray.push(n8);
-notesArray.push(n9);
-notesArray.push(n10);
-notesArray.push(n11);
-notesArray.push(n12);
-notesArray.push(n13);
-notesArray.push(n14);
+console.log(notesArray)
 
 function updateNotes(){
     n0 = new Howl({src: [notes[0]],preload: true, volume: 0.45});
@@ -75,14 +60,6 @@ function updateNotes(){
     n4 = new Howl({src: [notes[4]],preload: true, volume: 0.45});
     n5 = new Howl({src: [notes[5]],preload: true, volume: 0.45});
     n6 = new Howl({src: [notes[6]],preload: true, volume: 0.45});
-    n7 = new Howl({src: [notes[7]],preload: true, volume: 0.45});
-    n8 = new Howl({src: [notes[8]],preload: true, volume: 0.45});
-    n9 = new Howl({src: [notes[9]],preload: true, volume: 0.45});
-    n10 = new Howl({src: [notes[10]],preload: true, volume: 0.45});
-    n11 = new Howl({src: [notes[11]],preload: true, volume: 0.45});
-    n12 = new Howl({src: [notes[12]],preload: true, volume: 0.45});
-    n13 = new Howl({src: [notes[13]],preload: true, volume: 0.45});
-    n14 = new Howl({src: [notes[14]],preload: true, volume: 0.45});
 
     notesArray = [];
     notesArray.push(n0);
@@ -92,14 +69,6 @@ function updateNotes(){
     notesArray.push(n4);
     notesArray.push(n5);
     notesArray.push(n6);
-    notesArray.push(n7);
-    notesArray.push(n8);
-    notesArray.push(n9);
-    notesArray.push(n10);
-    notesArray.push(n11);
-    notesArray.push(n12);
-    notesArray.push(n13);
-    notesArray.push(n14);
 }
 
 toggleMute[0].onclick = function() {
@@ -273,23 +242,23 @@ document.addEventListener('keydown', function(event) {
     }
     else if(event.key == "k") {
         muteNotes()
-        playNote(7)
+        playNote(1)
     }
     else if(event.key == "l") {
         muteNotes()
-        playNote(8)
+        playNote(2)
     }
     else if(event.key == "ö") {
         muteNotes()
-        playNote(9)
+        playNote(3)
     }
     else if(event.key == "ä") {
         muteNotes()
-        playNote(10)
+        playNote(4)
     }
     else if(event.key == "'") {
         muteNotes()
-        playNote(11)
+        playNote(5)
     }
 });
 function changenotesPlaylist(){
